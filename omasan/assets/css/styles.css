@@ -1,0 +1,637 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    height: 100%;
+}
+
+.dn 
+{
+    display: none !important;
+}
+
+/* Styling Links */
+a
+{
+    text-decoration: none;
+    color: rgb(13, 121, 157);
+}
+/* Styling Links End*/
+
+/* Styling Buttons */
+
+button,
+.btn
+{
+    width: 150px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    letter-spacing: 2px;
+}
+/* Styling Buttons end*/
+
+/* Styling Button Group */
+
+.button-group
+{
+    display: flex;
+}
+
+.button-group.text-right
+{
+    justify-content: right;
+}
+
+.button-group.text-center
+{
+    justify-content: center;
+}
+
+.button-group.text-left
+{
+    justify-content: left;
+}
+
+/* Styling Button Group End*/
+
+/* Styling Section */
+
+section
+{
+    min-height: 300px;
+    width: 90%;
+    display: block;
+    /* border: red solid 2px; */
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 0 1rem;
+}
+
+section .title
+{
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    margin: 3px 0;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size:1.5rem;
+    text-transform: capitalize;
+}
+
+section .subTitle
+{
+    padding: 0.5rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+section .body
+{
+    padding: 0.5rem;
+    width: 100%;
+}
+
+section .body .description
+{
+    font-size: 18px;
+    line-height: 30px;
+    word-break: keep-all;
+}
+
+/* Styling Section End */
+
+/* Create Styling for texts */
+
+.text-center 
+{
+    text-align: center;
+}
+
+.text-left 
+{
+    text-align: left;
+}
+
+.text-right 
+{
+    text-align: right;
+}
+
+/* Create Styling for texts */
+
+/* Styling Cards */
+
+.cards
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards .card ,
+.cards.items1 .card 
+{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.cards.items2 .card 
+{
+    width: 48%;
+    margin: 5px;
+}
+
+.cards.items3 .card 
+{
+    width: 30%;
+    margin: 5px;
+}
+
+.cards.items4 .card 
+{
+    width: 24%;
+    margin: 5px;
+}
+
+.cards .card 
+{
+    border: grey solid 1px;
+    /* padding: 1rem; */
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.cards .card .head
+{
+    min-height: 50px;
+    padding: 0.5rem;
+    border-bottom: 1px solid grey;
+}
+
+.cards .card .body
+{
+    min-height: 50px;
+}
+
+.cards .card .footer
+{
+    background: #0f0f0f;
+    padding: 0.5rem;
+    min-height: 50px;
+}
+
+/* Styling Cards End*/
+
+/* Navbar Starts */
+
+.navbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    background: #000;
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: 10px;
+}
+
+.navbar .logo
+{
+    height: 100%;
+    max-width: 250px;
+    width: 200px;
+   border-radius: 10px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .logo img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.navbar .menu 
+{
+    display: flex;
+}
+
+.navbar .menu .menu-item
+{
+    padding: 1rem;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 0 5px;
+    letter-spacing: 2px;
+}
+
+.navbar .menu .menu-item:hover,
+.navbar .menu .menu-item.active
+{
+    border-bottom: 1px solid #fff;
+}
+
+.navbar .callToAction .btn
+{
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.navbar .navbarMenuButton
+{
+    display: none;
+    height: 50px;
+    width: 50px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:786px) {
+
+    .navbar .menu
+    {
+        /* display: none; */
+        position: absolute;
+        top: -100vh;
+        left: 0;
+        height: calc(100vh - 90px);
+        margin-top: 90px;
+        width: 100%;
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: 0.7s top ease-in-out;
+    }
+
+    .navbar .menu.active
+    {
+        top: 0;
+    }
+
+    .navbar .menu .menu-item
+    {
+        padding: 1rem;
+        margin: 5px 0;
+        width: max-content;
+        
+    }
+    
+    .navbar .navbarMenuButton
+    {
+        display: flex;
+    }
+
+    .navbar .callToAction .btn
+    {
+        text-align: center;
+    }
+
+}
+/* Navbar */
+
+/* Main Section */
+
+
+/* Banner Section */
+
+.banner
+{
+    height: 500px;
+    background: url('../images/Background-image.svg'), #0f0f0f;
+    color: #fff;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+.banner .title,
+.banner .motto,
+.banner .slogan
+{
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.banner .title
+{
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.banner .motto
+{
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.banner .slogan
+{
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+/* Banner Section End*/
+
+/* About Section Start */
+
+.about
+{
+    display: flex;
+    justify-content: center;
+}
+
+.about .left,
+.about .right 
+{
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid red; */
+    margin: 0 5px;
+}
+
+.about .left
+{
+    width: 350px;
+    height: 350px;
+    background: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .left img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* About Section Start End */
+
+/* What We Offer section */
+
+.what-we-offer
+{
+
+}
+
+.what-we-offer .cards 
+{
+    justify-content: center;
+}
+
+.what-we-offer .card
+{
+    border: none;
+}
+
+.what-we-offer .card .body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.what-we-offer .card .body .icon
+{
+    width: 100%;
+    height: 100%;
+    color: rgb(75, 75, 75);
+}
+
+.what-we-offer .card .body .icon .icon-icon
+{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.what-we-offer .card .body .icon .icon-title
+{
+    font-size: 16px;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+
+/* What We Offer section End */
+
+/* Gallery Section */
+
+.gallery
+{}
+
+.gallery .cards .card .body
+{
+    padding: 0;
+}
+
+.gallery .cards .card{
+    border: none;
+}
+
+.gallery .cards .card .image
+{
+    height: 200px;
+    /* background: grey; */
+}
+
+.gallery .cards .card .image img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.gallery .body .button-group
+{
+    margin-top: 20px;
+}
+
+/* Gallery Section End */
+
+/* Contact Us Page */
+
+.contact
+{
+    display: flex;
+}
+
+.contact .left,
+.contact .right
+{
+    width: 50%;
+    margin: 5px;
+}
+
+.contact .left
+{
+    height: 400px;
+    background: grey;
+    margin-right: 10px;
+    position: relative;
+}
+
+.contact .left .text
+{
+    position: absolute;
+    margin: auto;
+    /* color: red; */
+    top: 45%;
+    left: 17%;
+    text-transform: uppercase;
+    transform: rotate(-35deg);
+    font-size: 3rem;
+}
+
+
+.contact .contact-form
+{
+    position: relative;
+}
+
+.contact .contact-form .input
+{
+    margin-bottom: 15px;
+}
+
+.contact .contact-form .input label
+{
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.contact .contact-form .input input,
+.contact .contact-form .input textarea
+{
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid grey;
+    margin: 5px 0;
+    letter-spacing: 2px;
+
+}
+
+.contact .contact-form .input textarea
+{
+    height: 200px;
+    resize: none;
+}
+
+.contact .contact-form .input button
+{
+
+}
+
+/* Contact Us Page End */
+
+/* Main Section End */
+
+/* Footer Start */
+footer
+{
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+/* Footer Start End*/
+
+@media screen and (max-width: 1000px) {
+
+    .banner
+    {
+        text-align: center;
+    }
+    
+    .about,
+    .contact
+    {
+        flex-direction: column;
+    }
+
+    .about .right,
+    .about .left,
+    .contact .right,
+    .contact .left
+    {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .what-we-offer .cards .card
+    {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .gallery .cards .card
+    {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    
+    .gallery .cards .card
+    {
+        width: 48%;
+    }
+
+    .what-we-offer .cards .card
+    {
+        width: 48%;
+    }
+
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+    
+    .gallery .cards .card
+    {
+        width: 32.2%;
+    }
+
+}

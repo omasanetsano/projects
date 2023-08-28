@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Ecommerce Website</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="http://192.168.1.162/@itms/fontawesome-free-6.4.0-web/js/all.min.js"></script>
+    <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+
+        <!-- TOP NAVIGATION -->
+        <div class="topNavigation">
+
+            <div class="number">
+                <i class="fas fa-phone"></i>
+                +0000000000
+            </div>
+
+            <div class="offers">
+
+                <div class="text">
+                    get <span>50%</span> off on <span>_____</span> products
+                </div>
+
+                <span>
+                    |
+                </span>
+
+                <a href="#" class="btn">Shop Now</a>
+
+            </div>
+
+            <div class="store-info">
+
+                <div class="language info">
+                    <select name="" id="">
+                        <option value="">ENG</option>
+                    </select>
+                </div>
+
+                <div class="location info">
+                    <select name="" id="">
+                        <option value="">location</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- TOP NAVIGATION END -->
+
+        <!-- MAIN NAVIGATION -->
+        <nav class="navigation">
+
+            <a href="" class="logo">
+                
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200"  viewBox="0 0 200 40">
+                    <image id="tshirt-logo" x="0" y="0" width="49" height="40" xlink:href="data:img/png;base64,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"/>
+                    <image id="hi"  xlink:href="data:img/png;base64,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"/>
+                </svg> -->
+
+                <h1>Company Name</h1>
+
+            </a>
+
+            <div class="menu navbar-menu">
+
+                <select class="menu-item">
+                    <option value="">Categories</option>
+                </select>
+
+                <a href="#" class="menu-item">Deals</a>
+                <a href="#" class="menu-item">Latest Products</a>
+                <a href="#" class="menu-item">Delivery</a>
+
+            </div>
+
+            <div class="search-account-cart">
+
+                <form action="" method="get" class="search">
+                    <input type="search" name="search" id="search" placeholder="search product">
+                    <button type="submit" class="icon"><i class="fas fa-search"></i></button>
+                </form>
+
+                <a href="#" class="account menu-item">
+
+                    <div class="icon">
+                        <i class="far fa-user"></i>
+                    </div>
+
+                    <div class="text">
+                        account
+                    </div>
+
+                </a>
+
+                <a href="#" class="cart menu-item">
+
+                    <div class="icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+
+                    <div class="text">
+                        cart
+                    </div>
+
+                    <div class="number">
+                        xx
+                    </div>
+
+                </a>
+
+                <div class="responsive-menu-icon menu-item">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+            </div>
+
+
+
+        </nav>
+        <!-- MAIN NAVIGATION End -->
+
+        <main class="d">
+
+            <!-- WELCOME BANNER -->
+
+            <div class="banner">
+                
+                <div class="left">
+
+                    <div class="text"> grab upto 50% off on </div>
+
+                    <div class="text"> selected headphones </div>
+
+                    <a href="#"><button>Buy Now</button></a>
+
+                </div>
+
+                <div class="right">
+                    <img src="assets/img/IMG_2633.PNG" alt="Apple Air Max Image">
+                </div>
+
+            </div>
+        
+            <!-- WELCOME BANNER End -->
+
+            <!-- PRODUCTS -->
+
+            <div class="products-container">
+
+                <!-- FILTERS SECTION -->
+                <div class="filters">
+
+                    <div class="left">
+
+                        <select name="" id="" class="filter">
+                            <option value="">headphone type</option>
+                        </select>
+
+                        <select name="" id="" class="filter">
+                            <option value="">price</option>
+                        </select>
+
+                        <select name="" id="" class="filter">
+                            <option value="">review</option>
+                        </select>
+
+                        <select name="" id="" class="filter">
+                            <option value="">color</option>
+                        </select>
+
+                        <select name="" id="" class="filter">
+                            <option value="">material</option>
+                        </select>
+
+                        <select name="" id="" class="filter">
+                            <option value="">other</option>
+                        </select>
+
+                        <div class="filter">
+                            <div class="text">
+                                all filters
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-filter"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="right">
+                        <select class="filter">
+                            <option value="">sort by</option>
+                        </select>
+                    </div>
+
+                </div>
+                <!-- FILTERS SECTION END -->
+
+                <!-- PRODUCTS CONTAINER -->
+                <div class="products">
+
+                    <section>
+
+                        <div class="heading">
+                            <h2>Headphones for you!</h2>
+                        </div>
+
+                        <div class="body">
+
+                            <div class="product-card">
+
+                                <div class="product-image">
+                                    <img src="assets/img/IMG_2636.PNG" alt="">
+                                </div>
+
+                                <div class="product-description">
+
+                                    <div class="product-name-and-price">
+
+                                        <div class="product-name">airpods max</div>
+
+                                        <div class="product-price">$ 599 <sup>99</sup> </div>
+
+                                    </div>
+
+                                    <div class="product-description">
+                                        A perfect balance of high-quality audio
+                                    </div>
+
+                                    <div class="product-ratings">
+
+                                        <div class="stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-alt"></i>
+                                        </div>
+
+                                        <span>(192)</span>
+
+                                    </div>
+
+                                    <button class="product-add-to-cart">add to cart</button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="product-card">
+
+                                <div class="product-image">
+                                    <img src="assets/img/IMG_2634.PNG" alt="">
+                                </div>
+
+                                <div class="product-description">
+
+                                    <div class="product-name-and-price">
+
+                                        <div class="product-name">airpods max</div>
+
+                                        <div class="product-price">$ 599 <sup>99</sup> </div>
+
+                                    </div>
+
+                                    <div class="product-description">
+                                        A perfect balance of high-quality audio
+                                    </div>
+
+                                    <div class="product-ratings">
+
+                                        <div class="stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-alt"></i>
+                                        </div>
+
+                                        <span>(192)</span>
+
+                                    </div>
+
+                                    <button class="product-add-to-cart">add to cart</button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="product-card">
+
+                                <div class="product-image">
+                                    <img src="assets/img/IMG_2635.PNG" alt="">
+                                </div>
+
+                                <div class="product-description">
+
+                                    <div class="product-name-and-price">
+
+                                        <div class="product-name">airpods max</div>
+
+                                        <div class="product-price">$ 599 <sup>99</sup> </div>
+
+                                    </div>
+
+                                    <div class="product-description">
+                                        A perfect balance of high-quality audio
+                                    </div>
+
+                                    <div class="product-ratings">
+
+                                        <div class="stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-alt"></i>
+                                        </div>
+
+                                        <span>(192)</span>
+
+                                    </div>
+
+                                    <button class="product-add-to-cart">add to cart</button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="product-card">
+
+                                <div class="product-image">
+                                    <img src="assets/img/IMG_2636.PNG" alt="">
+                                </div>
+
+                                <div class="product-description">
+
+                                    <div class="product-name-and-price">
+
+                                        <div class="product-name">airpods max</div>
+
+                                        <div class="product-price">$ 599 <sup>99</sup> </div>
+
+                                    </div>
+
+                                    <div class="product-description">
+                                        A perfect balance of high-quality audio
+                                    </div>
+
+                                    <div class="product-ratings">
+
+                                        <div class="stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-alt"></i>
+                                        </div>
+
+                                        <span>(192)</span>
+
+                                    </div>
+
+                                    <button class="product-add-to-cart">add to cart</button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="product-card">
+
+                                <div class="product-image">
+                                    <img src="assets/img/IMG_2636.PNG" alt="">
+                                </div>
+
+                                <div class="product-description">
+
+                                    <div class="product-name-and-price">
+
+                                        <div class="product-name">airpods max</div>
+
+                                        <div class="product-price">$ 599 <sup>99</sup> </div>
+
+                                    </div>
+
+                                    <div class="product-description">
+                                        A perfect balance of high-quality audio
+                                    </div>
+
+                                    <div class="product-ratings">
+
+                                        <div class="stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-alt"></i>
+                                        </div>
+
+                                        <span>(192)</span>
+
+                                    </div>
+
+                                    <button class="product-add-to-cart">add to cart</button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="product-card">
+
+                                <div class="product-image">
+                                    <img src="assets/img/IMG_2636.PNG" alt="">
+                                </div>
+
+                                <div class="product-description">
+
+                                    <div class="product-name-and-price">
+
+                                        <div class="product-name">airpods max</div>
+
+                                        <div class="product-price">$ 599 <sup>99</sup> </div>
+
+                                    </div>
+
+                                    <div class="product-description">
+                                        A perfect balance of high-quality audio
+                                    </div>
+
+                                    <div class="product-ratings">
+
+                                        <div class="stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-alt"></i>
+                                        </div>
+
+                                        <span>(192)</span>
+
+                                    </div>
+
+                                    <button class="product-add-to-cart">add to cart</button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="product-card">
+
+                                <div class="product-image">
+                                    <img src="assets/img/IMG_2636.PNG" alt="">
+                                </div>
+
+                                <div class="product-description">
+
+                                    <div class="product-name-and-price">
+
+                                        <div class="product-name">airpods max</div>
+
+                                        <div class="product-price">$ 599 <sup>99</sup> </div>
+
+                                    </div>
+
+                                    <div class="product-description">
+                                        A perfect balance of high-quality audio
+                                    </div>
+
+                                    <div class="product-ratings">
+
+                                        <div class="stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-alt"></i>
+                                        </div>
+
+                                        <span>(192)</span>
+
+                                    </div>
+
+                                    <button class="product-add-to-cart">add to cart</button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="product-card">
+
+                                <div class="product-image">
+                                    <img src="assets/img/IMG_2636.PNG" alt="">
+                                </div>
+
+                                <div class="product-description">
+
+                                    <div class="product-name-and-price">
+
+                                        <div class="product-name">airpods max</div>
+
+                                        <div class="product-price">$ 599 <sup>99</sup> </div>
+
+                                    </div>
+
+                                    <div class="product-description">
+                                        A perfect balance of high-quality audio
+                                    </div>
+
+                                    <div class="product-ratings">
+
+                                        <div class="stars">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-alt"></i>
+                                        </div>
+
+                                        <span>(192)</span>
+
+                                    </div>
+
+                                    <button class="product-add-to-cart">add to cart</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+                <!-- PRODUCTS CONTAINER END -->
+
+            </div>
+
+            <!-- PRODUCTS -->
+
+        </main>
+
+        <footer class="footer">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <div class="heading">
+                        <h3 class="title">newsletter</h3>
+                        <p>
+                            Subscribe to our newsletter to stay up to date with our latest products.
+                        </p>
+                    </div>
+
+                    <div class="body">
+
+                        <form action="" method="post" class="footer-newsletter-form" >
+                            <input type="email" name="newsletter-email" id="newsletter-email" placeholder="someone@domain.com">
+                            <button type="submit" >
+                                Subscribe 
+                            </button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div class="col">
+
+                    <div class="heading">
+                        <h3 class="title">quick links</h3>
+                    </div>
+
+                    <div class="body">
+
+                        <div class="footer-menu">
+
+                            <a href="#" class="footer-menu-item">about</a>
+                            <a href="#" class="footer-menu-item">blog</a>
+                            <a href="#" class="footer-menu-item">shop</a>
+                            <a href="#" class="footer-menu-item">account</a>
+                            <a href="#" class="footer-menu-item">privacy policy</a>
+                            <a href="#" class="footer-menu-item">refund policy</a>
+                            <a href="#" class="footer-menu-item">terms and conditions</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col">
+
+                    <div class="heading">
+                        <h3 class="title">related items</h3>
+                    </div>
+
+                    <div class="body">
+
+                        <div class="footer-menu">
+
+                            <a href="#" class="footer-menu-item">latest products</a>
+                            <a href="#" class="footer-menu-item">trending products</a>
+                            <a href="#" class="footer-menu-item">jobs</a>
+                            <a href="#" class="footer-menu-item">policies</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col">
+                    
+                    <div class="heading">
+                        <h3 class="title">Follow us on social media</h3>
+                    </div>
+
+                    <div class="body">
+
+                        <div class="social-medias">
+
+                            <a href="#" class="social-media"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-media"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-media"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-media"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-media"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-media"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-media"><i class="far fa-envelope-open"></i></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col">
+                    
+                    <div class="heading">
+                        <h3 class="title">payments</h3>
+                        <p>View All The Payments Methods We Accept</p>
+                    </div>
+
+                    <div class="body">
+
+                        <div class="payment-methods social-medias">
+
+                            <div class="social-media" title="Apple Pay" ><i class="fab fa-apple-pay"></i></div>
+                            <div class="social-media" title="Google Pay" ><i class="fab fa-google-pay"></i></div>
+                            <div class="social-media" title="Amazon Pay" ><i class="fab fa-amazon-pay"></i></div>
+                            <div class="social-media" title="Mastercard"><i class="fab fa-cc-mastercard"></i></div>
+                            <div class="social-media" title="Visa"><i class="fab fa-cc-visa"></i></div>
+                            <div class="social-media" title="PayPal"><i class="fab fa-paypal"></i></div>
+                            <div class="social-media" title="Bank Transfer"><i class="fas fa-bank"></i></div>
+                            <div class="social-media" title="Cash"><i class="fas fa-money-bill-wave"></i></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="copyright-information">
+                &copy; 2023 COMPANY NAME. All Rights Reserved.
+            </div>
+
+        </footer>
+
+    </div>
+
+
+</body>
+</html>
