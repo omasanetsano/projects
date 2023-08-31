@@ -142,7 +142,7 @@ section .body .description
 }
 
 .cards .card ,
-.cards.items1 .card 
+.cards.items.card 
 {
     width: 100%;
     margin-bottom: 5px;
@@ -164,6 +164,9 @@ section .body .description
 {
     width: 24%;
     margin: 5px;
+    height:100%;
+    object-fit: contain;
+    object-fit: contain;
 }
 
 .cards .card 
@@ -466,6 +469,9 @@ section .body .description
 .gallery .cards .card .image
 {
     height: 200px;
+    width:100%;
+    
+    object-fit: contain;
     /* background: grey; */
 }
 
@@ -473,7 +479,7 @@ section .body .description
 {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .gallery .body .button-group
